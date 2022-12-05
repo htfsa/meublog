@@ -9,6 +9,7 @@ import { ApiProperty } from "@nestjs/swagger";
  export class Usuario {
 
    @PrimaryGeneratedColumn()
+   @ApiProperty() 
    public id: number;
 
    @IsNotEmpty()
@@ -23,12 +24,15 @@ import { ApiProperty } from "@nestjs/swagger";
 
    @IsNotEmpty()
    @MinLength(8)
+   @ApiProperty() 
    @Column({length: 255, nullable: false }) 
    public senha: string
 
    @Column({length: 5000 }) 
+   @ApiProperty() 
    public foto: string
 
+   @ApiProperty() 
    @OneToMany(() => Postagem, (postagem) => postagem.usuario)
    postagem: Postagem[]
 

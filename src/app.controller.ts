@@ -4,6 +4,9 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  getHello(): any {
+    throw new Error('Method not implemented.');
+  }
   constructor() {}
 
   @ApiExcludeEndpoint()
