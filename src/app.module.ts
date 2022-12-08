@@ -9,7 +9,7 @@ import { TemaModule } from './tema/tema.module';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { UsuarioModule } from './usuario/usuario.module';
 
-//isto roda no computador
+//isto roda no navegador
 @Module({
   imports: [
      TypeOrmModule.forRoot({
@@ -24,7 +24,7 @@ import { UsuarioModule } from './usuario/usuario.module';
 
     }),
 
-    //isto roda no servidor
+    //isto roda no servidor do vscode
     /* TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
